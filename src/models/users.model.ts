@@ -2,6 +2,10 @@ import { model, Schema, Document } from 'mongoose';
 import { User } from '@interfaces/users.interface';
 
 const UserSchema: Schema = new Schema({
+  _id: {
+    type: Schema.Types.ObjectId,
+    required: true,
+  },
   email: {
     type: String,
     required: true,
